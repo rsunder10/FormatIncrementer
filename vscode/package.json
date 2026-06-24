@@ -2,7 +2,7 @@
   "name": "format-incrementer",
   "displayName": "Format Incrementer",
   "description": "Fill every caret/selection with a generated sequence: numeric, padded, radix, alphabetic, Roman, dates, or a custom template.",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "publisher": "rsunder10",
   "icon": "images/icon.png",
   "galleryBanner": {
@@ -81,7 +81,9 @@
     "test": "tsc -p ./ --noEmit && node ./out/test/sequence.test.js",
     "pretest": "tsc -p ./",
     "lint": "tsc -p ./ --noEmit",
-    "screenshots": "bash scripts/capture-screenshots.sh"
+    "screenshots": "bash scripts/capture-screenshots.sh",
+    "package:vsce": "vsce package --baseImagesUrl https://raw.githubusercontent.com/rsunder10/FormatIncrementer/master/vscode/images --baseContentUrl https://github.com/rsunder10/FormatIncrementer/blob/master/vscode",
+    "publish:openvsx": "ovsx publish --baseImagesUrl https://raw.githubusercontent.com/rsunder10/FormatIncrementer/master/vscode/images --baseContentUrl https://github.com/rsunder10/FormatIncrementer/blob/master/vscode"
   },
   "devDependencies": {
     "@types/node": "^20.11.0",

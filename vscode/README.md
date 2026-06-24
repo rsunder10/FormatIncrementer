@@ -2,7 +2,7 @@
 
 Fill every caret or selection in your editor with a generated **sequence** — not just plain `1, 2, 3`. Use numbers, zero-padded IDs, hex, letters, Roman numerals, dates, or a custom template.
 
-![Choose a pattern](images/screenshot-pattern-quickpick.png)
+![Choose a pattern](https://raw.githubusercontent.com/rsunder10/FormatIncrementer/master/vscode/images/screenshot-pattern-quickpick.png)
 
 ## Quick start
 
@@ -23,15 +23,15 @@ Fill every caret or selection in your editor with a generated **sequence** — n
 | **Editor right-click** | Same command |
 | **Command Palette** | `Format Incrementer: Help` |
 
-![Command Palette](images/screenshot-command-palette.png)
+![Command Palette](https://raw.githubusercontent.com/rsunder10/FormatIncrementer/master/vscode/images/screenshot-command-palette.png)
 
 ## Example
 
 Place carets on three lines and choose **Numeric** (start `1`, step `1`):
 
-![Before — multiple carets](images/screenshot-multi-carets.png)
+![Before — multiple carets](https://raw.githubusercontent.com/rsunder10/FormatIncrementer/master/vscode/images/screenshot-multi-carets.png)
 
-![After — sequence applied](images/screenshot-after-apply.png)
+![After — sequence applied](https://raw.githubusercontent.com/rsunder10/FormatIncrementer/master/vscode/images/screenshot-after-apply.png)
 
 Carets are filled in **document order** in a **single undo step**. Your last-used pattern is remembered.
 
@@ -49,7 +49,7 @@ Carets are filled in **document order** in a **single undo step**. Your last-use
 
 Each field prompt includes a **live preview** of the first values:
 
-![Start value with preview](images/screenshot-start-input.png)
+![Start value with preview](https://raw.githubusercontent.com/rsunder10/FormatIncrementer/master/vscode/images/screenshot-start-input.png)
 
 ### Template tokens
 
