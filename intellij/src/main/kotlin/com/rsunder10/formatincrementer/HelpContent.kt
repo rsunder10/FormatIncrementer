@@ -107,7 +107,7 @@ row-{n:03}  -&gt;  row-001, row-002
             original auto-increment.</li>
           </ul>
 
-          <p><i>Format Incrementer 2.0 &mdash; by rsunder10 (RedEyeGuy)</i></p>
+          <p><i>Format Incrementer 3.0 &mdash; by rsunder10 (RedEyeGuy)</i></p>
         </body>
         </html>
     """.trimIndent()

@@ -2,7 +2,7 @@
   "name": "format-incrementer",
   "displayName": "Format Incrementer",
   "description": "Fill every caret/selection with a generated sequence: numeric, padded, radix, alphabetic, Roman, dates, or a custom template.",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "publisher": "rsunder10",
   "license": "MIT",
   "author": {

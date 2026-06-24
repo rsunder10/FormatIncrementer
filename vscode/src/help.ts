@@ -196,7 +196,7 @@ export function getHelpHtml(): string {
   <div class="tip"><strong>Descending:</strong> Use a negative step (e.g. start 10, step -1 → 10, 9, 8).</div>
   <div class="tip"><strong>Legacy behavior:</strong> Choose <strong>Numeric</strong>, start <code>1</code>, step <code>1</code> for the original auto-increment.</div>
 
-  <footer>Format Incrementer 2.0 — by rsunder10 (RedEyeGuy)</footer>
+  <footer>Format Incrementer 3.0 — by rsunder10 (RedEyeGuy)</footer>
 </body>
 </html>`;
 }

@@ -1,7 +1,7 @@
 <idea-plugin>
   <id>com.rsunder10.format-incrementer</id>
   <name>Format Incrementer</name>
-  <version>2.0.0</version>
+  <version>3.0.0</version>
   <vendor email="sunderis10@gmail.com" url="http://www.rsunder10.com">redEyeGuyRSunder10</vendor>
 
   <description><![CDATA[
@@ -15,6 +15,8 @@
   ]]></description>
 
   <change-notes><![CDATA[
+    <p><b>3.0.0</b> - Help documentation, improved dev tooling, and UI polish across
+    IntelliJ and VS Code.</p>
     <p><b>2.0.0</b> - Full rewrite on the modern IntelliJ Platform (Gradle, Kotlin).
     Adds a pattern picker with live preview supporting numeric, padding, radix,
     alphabetic, Roman, date, and template sequences. A single undoable edit now
