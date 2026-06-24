@@ -1,5 +1,5 @@
 <idea-plugin>
-  <id>com.rsunder10.format-incrementer</id>
+  <id>redEyeGuy.rsunder10.plugin</id>
   <name>Format Incrementer</name>
   <version>3.0.0</version>
   <vendor email="sunderis10@gmail.com" url="http://www.rsunder10.com">redEyeGuyRSunder10</vendor>
