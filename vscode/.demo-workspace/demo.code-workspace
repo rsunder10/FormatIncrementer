@@ -1,0 +1,7 @@
+{
+  "folders": [{ "path": "." }],
+  "settings": {
+    "workbench.colorTheme": "Default Dark Modern",
+    "editor.minimap.enabled": false
+  }
+}

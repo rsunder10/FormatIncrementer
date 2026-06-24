@@ -1,4 +1,7 @@
+# Dependencies & build output
 node_modules/
 out/
 dist/
+
+# Packaged extension (rebuild with: npx @vscode/vsce package)
 *.vsix

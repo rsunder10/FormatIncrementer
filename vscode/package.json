@@ -2,8 +2,13 @@
   "name": "format-incrementer",
   "displayName": "Format Incrementer",
   "description": "Fill every caret/selection with a generated sequence: numeric, padded, radix, alphabetic, Roman, dates, or a custom template.",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "publisher": "rsunder10",
+  "icon": "images/icon.png",
+  "galleryBanner": {
+    "color": "#1e1e1e",
+    "theme": "dark"
+  },
   "license": "MIT",
   "author": {
     "name": "redEyeGuyRSunder10",
@@ -75,7 +80,8 @@
     "compile": "tsc -p ./",
     "test": "tsc -p ./ --noEmit && node ./out/test/sequence.test.js",
     "pretest": "tsc -p ./",
-    "lint": "tsc -p ./ --noEmit"
+    "lint": "tsc -p ./ --noEmit",
+    "screenshots": "bash scripts/capture-screenshots.sh"
   },
   "devDependencies": {
     "@types/node": "^20.11.0",

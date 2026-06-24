@@ -4,6 +4,8 @@ out/**
 node_modules/**
 tsconfig.json
 .gitignore
+.demo-workspace/**
+scripts/**
 **/*.map
 **/*.ts
 !dist/**

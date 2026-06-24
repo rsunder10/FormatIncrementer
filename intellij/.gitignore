@@ -1,7 +1,15 @@
+# Gradle & IntelliJ Platform plugin build
 .gradle/
 build/
 .intellijPlatform/
-*.iml
-.idea/
-out/
+
+# Local JDK bootstrap (scripts/ensure-jdk.sh)
 .jdk/
+
+# IDE compile output
+out/
+bin/
+
+# IntelliJ project files (user-specific)
+.idea/
+*.iml
