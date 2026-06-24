@@ -16,14 +16,12 @@ Fill every caret or selection in your editor with a generated **sequence** — n
 
 ## Keyboard shortcut
 
-The **same chord** is used in IntelliJ and VS Code:
+The **same shortcut** is used in IntelliJ and VS Code:
 
 | Platform | Shortcut |
 | --- | --- |
-| **macOS** | `Shift + Cmd + 1`, then `Shift + Cmd + 1` again |
-| **Windows / Linux** | `Shift + Ctrl + 1`, then `Shift + Ctrl + 1` again |
-
-Press the combination **twice in a row** (a chord shortcut).
+| **macOS** | `Shift + Cmd + 1` |
+| **Windows / Linux** | `Shift + Ctrl + 1` |
 
 ---
 
@@ -128,7 +126,9 @@ page-{n:roman}    page-i, page-ii, page-iii
 
 | Issue | Solution |
 | --- | --- |
-| Shortcut does nothing | Press the chord **twice** — it is a two-step shortcut, not a single keypress. |
+| Shortcut does nothing | Focus the editor first. Check **Settings → Keymap → Find Action by Shortcut** for conflicts on `Shift+Cmd+1` / `Shift+Ctrl+1`. |
+| `./gradlew` fails with `25.0.1` | Your system JDK is 25; Gradle 8.x needs JDK 17–24 to run. Run `./scripts/ensure-jdk.sh` in `intellij/`, or set `JAVA_HOME` to JDK 21. |
+| `./gradlew runIde` logs `jb.vmOptionsFile=null` | Harmless sandbox warning when the dev IDE has no custom VM options file. It does not affect the plugin. JVM args are set in `build.gradle.kts` for `runIde`. |
 | Same value at every caret | Check that carets are in different positions; only one caret means only one value. |
 | Roman shows a number | Roman numerals only work for values 1–3999; outside that range the plain number is shown. |
 | Date looks wrong | Use ISO format for start date (`2024-01-01` or `2024-01-01T09:00:00`). |

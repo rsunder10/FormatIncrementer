@@ -33,7 +33,9 @@
             description="Fill carets/selections with a generated sequence">
       <add-to-group group-id="ToolsMenu" anchor="first"/>
       <add-to-group group-id="EditorPopupMenu" anchor="last"/>
-      <keyboard-shortcut keymap="$default" first-keystroke="shift meta 1" second-keystroke="shift meta 1"/>
+      <keyboard-shortcut keymap="Mac OS X" first-keystroke="shift meta 1" replace-all="true"/>
+      <keyboard-shortcut keymap="Mac OS X 10.5+" first-keystroke="shift meta 1" replace-all="true"/>
+      <keyboard-shortcut keymap="$default" first-keystroke="shift control 1" replace-all="true"/>
     </action>
     <action id="FormatIncrementer.Help"
             class="com.rsunder10.formatincrementer.HelpAction"
@@ -41,6 +43,7 @@
             description="How to use Format Incrementer">
       <add-to-group group-id="ToolsMenu" anchor="after" relative-to-action="FormatIncrementer.Increment"/>
       <add-to-group group-id="HelpMenu" anchor="last"/>
+      <add-to-group group-id="EditorPopupMenu" anchor="last"/>
     </action>
   </actions>
 </idea-plugin>

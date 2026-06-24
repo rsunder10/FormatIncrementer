@@ -88,6 +88,12 @@ APP_BASE_NAME=${0##*/}
 # Discard cd standard output in case $CDPATH is set (https://github.com/gradle/gradle/issues/25036)
 APP_HOME=$( cd -P "${APP_HOME:-./}" > /dev/null && printf '%s\n' "$PWD" ) || exit
 
+# Format Incrementer: pick a Gradle-compatible JDK when the system default is JDK 25+.
+if [ -f "$APP_HOME/gradle/jvm-env.sh" ]; then
+  # shellcheck disable=SC1091
+  . "$APP_HOME/gradle/jvm-env.sh"
+fi
+
 # Use the maximum available, or set MAX_FD != -1 to use that value.
 MAX_FD=maximum
 

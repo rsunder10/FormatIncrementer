@@ -3,6 +3,7 @@ package com.rsunder10.formatincrementer
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.ui.ComboBox
 import com.intellij.openapi.ui.DialogWrapper
+import com.intellij.openapi.ui.DialogWrapper.DialogWrapperAction
 import com.intellij.openapi.ui.ValidationInfo
 import com.intellij.ui.components.JBCheckBox
 import com.intellij.ui.components.JBLabel
@@ -60,9 +61,9 @@ class IncrementDialog(
     }
 
     override fun createLeftSideActions(): Array<javax.swing.Action> = arrayOf(
-        object : javax.swing.AbstractAction("Help") {
-            override fun actionPerformed(e: java.awt.event.ActionEvent?) {
-                HelpDialog(project).show()
+        object : DialogWrapperAction("Help") {
+            override fun doAction(e: java.awt.event.ActionEvent?) {
+                HelpDialogs.show(project, modal = false)
             }
         },
     )

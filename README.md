@@ -34,10 +34,8 @@ sequence engine:
 
 | Platform | Shortcut |
 | --- | --- |
-| **macOS** | `Shift + Cmd + 1`, then `Shift + Cmd + 1` again |
-| **Windows / Linux** | `Shift + Ctrl + 1`, then `Shift + Ctrl + 1` again |
-
-Press the combination **twice in a row** — it is a chord shortcut, not a single keypress.
+| **macOS** | `Shift + Cmd + 1` |
+| **Windows / Linux** | `Shift + Ctrl + 1` |
 
 ### Where to find it
 
@@ -97,7 +95,23 @@ Descending sequences are supported via a negative step.
 
 ### IntelliJ plugin
 
-Requires JDK 21 (auto-provisioned via the Gradle toolchain resolver if missing).
+Requires JDK 21 for **compilation** (auto-provisioned via the Gradle toolchain resolver).
+Gradle itself **cannot run on JDK 25** — if `./gradlew` fails with `25.0.1`, the wrapper
+auto-selects a compatible JDK from common install locations. If none is found, run the
+one-time setup script:
+
+```bash
+cd intellij
+./scripts/ensure-jdk.sh   # downloads JDK 21 into .jdk/ (gitignored)
+./gradlew runIde
+```
+
+Or use the convenience launcher:
+
+```bash
+cd intellij
+./run-ide.sh
+```
 
 ```bash
 cd intellij

@@ -45,8 +45,8 @@
     "keybindings": [
       {
         "command": "formatIncrementer.increment",
-        "key": "shift+ctrl+1 shift+ctrl+1",
-        "mac": "shift+cmd+1 shift+cmd+1",
+        "key": "shift+ctrl+1",
+        "mac": "shift+cmd+1",
         "when": "editorTextFocus"
       }
     ],

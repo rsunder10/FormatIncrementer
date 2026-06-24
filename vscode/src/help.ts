@@ -1,8 +1,8 @@
 import * as vscode from "vscode";
 
 /** Keep in sync with intellij/.../HelpContent.kt and docs/HELP.md */
-export const SHORTCUT_MAC = "Shift + Cmd + 1, then Shift + Cmd + 1";
-export const SHORTCUT_WIN = "Shift + Ctrl + 1, then Shift + Ctrl + 1";
+export const SHORTCUT_MAC = "Shift + Cmd + 1";
+export const SHORTCUT_WIN = "Shift + Ctrl + 1";
 
 export function getHelpHtml(): string {
   return `<!DOCTYPE html>
@@ -129,10 +129,9 @@ export function getHelpHtml(): string {
   </ol>
 
   <h2>Keyboard shortcut</h2>
-  <p>The same chord is used in VS Code and IntelliJ:</p>
+  <p>The same shortcut is used in VS Code and IntelliJ:</p>
   <p><span class="shortcut"><strong>macOS:</strong> ${SHORTCUT_MAC}</span></p>
   <p><span class="shortcut"><strong>Windows / Linux:</strong> ${SHORTCUT_WIN}</span></p>
-  <p>Press the combination <strong>twice in a row</strong> (a chord shortcut).</p>
 
   <h2>Where to find it</h2>
   <table>
