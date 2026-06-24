@@ -1,0 +1,86 @@
+{
+  "name": "format-incrementer",
+  "displayName": "Format Incrementer",
+  "description": "Fill every caret/selection with a generated sequence: numeric, padded, radix, alphabetic, Roman, dates, or a custom template.",
+  "version": "2.0.0",
+  "publisher": "rsunder10",
+  "license": "MIT",
+  "author": {
+    "name": "redEyeGuyRSunder10",
+    "email": "sunderis10@gmail.com",
+    "url": "http://www.rsunder10.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rsunder10/FormatIncrementer"
+  },
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other",
+    "Formatters"
+  ],
+  "keywords": [
+    "increment",
+    "sequence",
+    "multi-cursor",
+    "numbering",
+    "fill"
+  ],
+  "main": "./dist/extension.js",
+  "activationEvents": [],
+  "contributes": {
+    "commands": [
+      {
+        "command": "formatIncrementer.increment",
+        "title": "Format Incrementer: Fill Carets with Sequence"
+      },
+      {
+        "command": "formatIncrementer.showHelp",
+        "title": "Format Incrementer: Help",
+        "icon": "$(question)"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "formatIncrementer.increment",
+        "key": "shift+ctrl+1 shift+ctrl+1",
+        "mac": "shift+cmd+1 shift+cmd+1",
+        "when": "editorTextFocus"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "formatIncrementer.increment",
+          "group": "1_modification"
+        },
+        {
+          "command": "formatIncrementer.showHelp",
+          "group": "1_modification@1"
+        }
+      ],
+      "commandPalette": [
+        {
+          "command": "formatIncrementer.showHelp"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run build",
+    "build": "esbuild src/extension.ts --bundle --outfile=dist/extension.js --external:vscode --format=cjs --platform=node",
+    "watch": "npm run build -- --sourcemap --watch",
+    "compile": "tsc -p ./",
+    "test": "tsc -p ./ --noEmit && node ./out/test/sequence.test.js",
+    "pretest": "tsc -p ./",
+    "lint": "tsc -p ./ --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/vscode": "^1.85.0",
+    "esbuild": "^0.24.0",
+    "typescript": "^5.4.0"
+  }
+}

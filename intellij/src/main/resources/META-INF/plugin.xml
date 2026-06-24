@@ -1,0 +1,46 @@
+<idea-plugin>
+  <id>com.rsunder10.format-incrementer</id>
+  <name>Format Incrementer</name>
+  <version>2.0.0</version>
+  <vendor email="sunderis10@gmail.com" url="http://www.rsunder10.com">redEyeGuyRSunder10</vendor>
+
+  <description><![CDATA[
+    <p>Fill every caret/selection in the editor with a generated sequence - not just
+    plain auto-increment. Place multiple carets (or selections), invoke
+    <b>Format Incrementer</b>, pick a pattern, preview it live, and apply.</p>
+    <p>Supported patterns: numeric (start/step), zero-padded, radix (hex/oct/bin/custom),
+    alphabetic (a, b, c, ... aa), Roman numerals, dates with a step, and a custom
+    template such as <code>item_{n}</code> or <code>row-{n:03}</code>.</p>
+    <p>- by rsunder10 (RedEyeGuy)</p>
+  ]]></description>
+
+  <change-notes><![CDATA[
+    <p><b>2.0.0</b> - Full rewrite on the modern IntelliJ Platform (Gradle, Kotlin).
+    Adds a pattern picker with live preview supporting numeric, padding, radix,
+    alphabetic, Roman, date, and template sequences. A single undoable edit now
+    covers all carets.</p>
+  ]]></change-notes>
+
+  <depends>com.intellij.modules.platform</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+  </extensions>
+
+  <actions>
+    <action id="FormatIncrementer.Increment"
+            class="com.rsunder10.formatincrementer.IncrementAction"
+            text="Format Incrementer..."
+            description="Fill carets/selections with a generated sequence">
+      <add-to-group group-id="ToolsMenu" anchor="first"/>
+      <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+      <keyboard-shortcut keymap="$default" first-keystroke="shift meta 1" second-keystroke="shift meta 1"/>
+    </action>
+    <action id="FormatIncrementer.Help"
+            class="com.rsunder10.formatincrementer.HelpAction"
+            text="Format Incrementer Help"
+            description="How to use Format Incrementer">
+      <add-to-group group-id="ToolsMenu" anchor="after" relative-to-action="FormatIncrementer.Increment"/>
+      <add-to-group group-id="HelpMenu" anchor="last"/>
+    </action>
+  </actions>
+</idea-plugin>
